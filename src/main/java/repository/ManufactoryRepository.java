@@ -11,8 +11,8 @@ public class ManufactoryRepository {
 
     public ManufactoryRepository() {
         manufactoriesList = new LinkedList<>();
-        manufactoriesList.add(new Manufactory("GoldenFactory", Country.Ukraine));
-        manufactoriesList.add(new Manufactory("CeramicINC", Country.UniteKingdom));
+        manufactoriesList.add(new Manufactory("GoldenFactory", Country.UKRAINE));
+        manufactoriesList.add(new Manufactory("CeramicINC", Country.UNITEDKINKDOM));
     }
 
     public boolean create(Manufactory manufactory) {

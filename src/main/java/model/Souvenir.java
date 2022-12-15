@@ -1,16 +1,15 @@
 package model;
 
-import java.time.LocalDate;
 
 public class Souvenir {
     private final int id;
     private String name;
     private String manufactoryName;
-    private LocalDate releaseDate;
+    private String releaseDate;
     private double price;
     private static int counter = 1;
 
-    public Souvenir(String name, String manufactoryName, LocalDate releaseDate, double price) {
+    public Souvenir(String name, String manufactoryName, String releaseDate, double price) {
         this.name = name;
         this.manufactoryName = manufactoryName;
         this.releaseDate = releaseDate;
@@ -34,11 +33,11 @@ public class Souvenir {
         this.manufactoryName = manufactoryName;
     }
 
-    public LocalDate getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 

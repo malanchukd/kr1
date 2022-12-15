@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalDate;
 
 @WebServlet(value = "/create-souvenir")
 public class CreateSouvenirServlet extends HttpServlet {
@@ -31,7 +30,7 @@ public class CreateSouvenirServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String manufactoryName = request.getParameter("nameOfManufacture");
-        LocalDate releaseDate = LocalDate.parse(request.getParameter("yyyy,mm,dd"));
+        String releaseDate = request.getParameter("releaseDate");
         double price = Double.parseDouble(request.getParameter("price"));
         Souvenir souvenir = new Souvenir(name, manufactoryName, releaseDate, price);
 

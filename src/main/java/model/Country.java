@@ -1,10 +1,10 @@
 package model;
 
 public enum Country {
-    Ukraine,
+    UKRAINE,
     USA,
-    Germany,
-    Poland,
-    France,
-    UniteKingdom
+    GERMANY,
+    POLAND,
+    FRANCE,
+    UNITEDKINKDOM
 }

@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalDate;
 
 @WebServlet(value = "/edit-souvenir")
 public class UpdateSouvenirServlet extends HttpServlet {
@@ -41,12 +40,12 @@ public class UpdateSouvenirServlet extends HttpServlet {
         }
         String name = souvenir.getName();
         String manufactoryName = souvenir.getManufactoryName();
-        LocalDate releaseDate = souvenir.getReleaseDate();
+        String releaseDate = souvenir.getReleaseDate();
         double price = souvenir.getPrice();
 
         souvenir.setName(request.getParameter("name"));
         souvenir.setManufactoryName(request.getParameter("manufactoryName"));
-        souvenir.setReleaseDate(LocalDate.parse(request.getParameter("yyyy,mm,dd")));
+        souvenir.setReleaseDate(request.getParameter("releaseDate"));
         souvenir.setPrice(Double.parseDouble(request.getParameter("price")));
 
         if(souvenirRepository.update(souvenir)) {

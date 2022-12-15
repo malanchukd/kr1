@@ -2,7 +2,6 @@ package repository;
 
 import model.Souvenir;
 
-import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,8 +10,8 @@ public class SouvenirRepository {
 
     public SouvenirRepository() {
         souvenirList = new LinkedList<>();
-        souvenirList.add(new Souvenir("Ring", "GoldenFactory", LocalDate.of(2022, 12, 1), 142));
-        souvenirList.add(new Souvenir("Cup", "CeramicINC", LocalDate.of(2015, 3, 5), 10));
+        souvenirList.add(new Souvenir("Ring", "GoldenFactory", "2022-12-1", 142));
+        souvenirList.add(new Souvenir("Cup", "CeramicINC", "2015-3-5", 10));
     }
 
     public boolean create(Souvenir souvenir) {
